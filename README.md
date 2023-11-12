@@ -8,4 +8,4 @@ See `dior.py` and `example.ipynb`.
 
 Legend:
 - Red: target orthogonal vectors
-- Blue: fitted orthogonal vectors
+- Blue: fitted orthogonal vectors (always orthogonal!)
