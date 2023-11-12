@@ -4,7 +4,7 @@ This is a PyTorch implementation of differentiable reparameterization of tall ma
 
 I developed this small side project while trying to implement Orthogonal Sylvester ﬂows.
 
-"dior" stands for "differentiable iterative orthogonalization".
+"dior" (cool name, right?) stands for "differentiable iterative orthogonalization".
 
 ## Task 1: low-dimensional
 
