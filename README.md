@@ -1,6 +1,6 @@
 # dior
 
-Differentiable reparameterization of matrix orthogonalization in PyTorch.
+Differentiable reparameterization of matrix orthogonalization in PyTorch. This is a side project that I developed while trying to implement sylvester flows.
 
 "dior" stands for "differentiable iterative orthogonalization".
 
