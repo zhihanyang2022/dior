@@ -1,6 +1,6 @@
 # dior
 
-This is a PyTorch implementation of differentiable reparameterization of matrix orthogonalization. 
+This is a PyTorch implementation of differentiable reparameterization of tall matrices with orthogonal columns.
 
 I developed this small side project while trying to implement Orthogonal Sylvester ﬂows.
 
