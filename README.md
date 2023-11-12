@@ -1,2 +1,3 @@
 # dior
-Differentiable orthogonalization in PyTorch
+
+Differentiable reparameterization of matrix orthogonalization in PyTorch
