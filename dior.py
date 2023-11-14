@@ -2,13 +2,11 @@ import torch
 from torch.linalg import matrix_norm as frob_norm
 
 
-def dior(Q0, max_iters=30, stop_early=True, tol=1e-6):
+def orthogonal(Q0, max_iters=30, stop_early=True, tol=1e-6):
     """
-    Iterative orthogonalization of a matrix.
+    Iterative orthogonalization of columns of a tall matrix.
     
     The output matrix (Q) is differentiable with respect to the input matrix (Q0).
-    
-    The name "dior" stands for "differentiable iterative orthogonalization".
 
     Args:
         Q0: some random matrix (cannot be degenerate like a matrix of zeros)
