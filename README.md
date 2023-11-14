@@ -1,10 +1,10 @@
-# dior
+# DIOR
 
 This is a PyTorch implementation of two ways of achieving differentiable reparameterization of orthogonal matrices.
 
 I developed this small side project while trying to implement Orthogonal and Householder Sylvester ﬂows.
 
-"dior" (cool name, right?) stands for "differentiable iterative orthogonalization".
+"DIOR" (cool name, right?) stands for "DIfferentiable ORthogonalization".
 
 ## Method 1: iterative
 
