@@ -68,6 +68,6 @@ Case 1 ($n=64$, $n-m=63$):
 
 <img src="householder/num_householders_vs_recon_perf_63.png">
 
-Case 1 ($n=64$, $n-m=64$)
+Case 2 ($n=64$, $n-m=64$)
 
 <img src="householder/num_householders_vs_recon_perf_64.png">
