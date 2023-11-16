@@ -1,4 +1,4 @@
-<img width="720" alt="image" src="https://github.com/zhihanyang2022/dior/assets/43589364/bfc98258-5aeb-4062-83ff-7fb32c0a54c1">
+<img alt="image" src="https://github.com/zhihanyang2022/dior/assets/43589364/bfc98258-5aeb-4062-83ff-7fb32c0a54c1">
 
 This is a PyTorch implementation of two ways of achieving differentiable reparameterization of matrices with orthogonal columns.
 
