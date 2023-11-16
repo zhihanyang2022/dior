@@ -30,7 +30,7 @@ Legend:
 
 Here $D=64$ and $M=20$.
 
-<img src="orthogonal/64d_learning_process.png" width=50%>
+<img src="orthogonal/64d_learning_process.png" width=50% align="center">
 
 ## Method 2: composing Householder reflections
 
@@ -62,7 +62,7 @@ Clearly, $m$ could be anywhere between $0$ and $n$ (if $U = I_n$) inclusive. If 
 
 Let's assume $n-m < n -1$. Such a $U$ would require fewer than $n-1$ Householder transformations according to the theorem. Sure, but what would be the harm of using $n-1$ transformations (more than required)? Well, considering the fact that an odd number of Householder transformations cannot form the identity matrix, the difference between $n-m$ and $n-1$ must be an even number for $n-1$ transformations to work. 
 
-Below are results from experiments in which I tried to "fit" a random orthogonal matrix ($n=64$) using Householder transformations by gradient descent on the mean squared error. I reported the mean absolute error on the vertical axes for better interpretation. Pay attention to the wobbling behavior to the right of the plots. Interestingly, a random orthogonal matrix with $n=64$ is equally likely to have $n-m=63$ or $n-m=64$ (see the notebook for the plot), so this is in no way a contrived experiment. 
+Below are results from experiments in which I tried to "fit" a random orthogonal matrix ($n=64$) using a composition of chained Householder transformations by gradient descent on the mean squared error. I reported the mean absolute error on the vertical axes for better interpretation. Pay attention to the wobbling behavior to the right of the plots. Interestingly, a random orthogonal matrix with $n=64$ is equally likely to have $n-m=63$ or $n-m=64$ (see the notebook for the plot), so this is in no way a contrived experiment. 
 
 Case 1 ($n=64$, $n-m=63$):
 
