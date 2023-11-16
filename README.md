@@ -12,7 +12,7 @@ The iterative procedure:
 
 $$Q^{(k+1)} = Q^{(k)} (I + \frac{1}{2} (I - Q^{(k) T} Q^{(k)}))$$
 
-where $Q_0$ is some arbitrary matrix with unit Frobenius norm.
+where $Q_0$ is some arbitrary matrix with unit Frobenius norm. $Q^{(k)}$ approaches an orthogonal matrix as $k \rightarrow \infty$, but we can terminate it early when it's good enough.
 
 Let $D$ and $M$ denote the number of rows and columns of $Q_0$ respectively. This method only works for tall matrices ($D>M$) with orthogonal columns. It can also work for $D=M$ but, empirically, convergence is not guaranteed.
 
