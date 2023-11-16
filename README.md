@@ -12,9 +12,9 @@ The iterative procedure:
 
 $$Q^{(k+1)} = Q^{(k)} (I + \frac{1}{2} (I - Q^{(k) T} Q^{(k)}))$$
 
-This method only works for tall matrices (number of rows > number of columns) with orthogonal columns. Let $D$ and $M$ denote the number of rows and columns respectively. It can also work when $D=M$ but, empirically speaking, convergence is not guaranteed.
+Let $D$ and $M$ denote the number of rows and columns respectively. This method only works for tall matrices ($D>M$) with orthogonal columns. It can also work when $D=M$ but, empirically speaking, convergence is not guaranteed.
 
-### Experiment 1: reconstructing a 3-by-2 orthogonal matrix
+### Experiment 1: reconstructing a 3-by-2 matrix with orthogonal columns
 
 Here $D=3$ and $M=2$.
 
@@ -24,7 +24,7 @@ Legend:
 - Red: target orthogonal vectors
 - Blue: fitted orthogonal vectors (always orthogonal!)
 
-### Experiment 2: reconstructing a 64-by-20 orthogonal matrix
+### Experiment 2: reconstructing a 64-by-20 matrix with orthogonal columns
 
 Here $D=64$ and $M=20$.
 
@@ -50,7 +50,7 @@ In the Sylvester flows paper, there was this quote: "It can be shown that any $M
 }
 ```
 
-This paper contains a very important theorem on decomposing orthogonal matrices into Householder transformations. 
+This paper above contains a very important theorem on decomposing orthogonal matrices into Householder transformations. 
 
 **Theorem 2.** Every real orthogonal $n \times n$ matrix $U$ is the product of $n − m$ real orthogonal Householder matrices for $m = dim ( ker( U − I_n )) $.
 
@@ -58,7 +58,7 @@ Clearly, $m$ could be anywhere between $0$ and $n$ (if $U = I_n$) inclusive. If 
 
 Let's assume $n-m < n -1$. Such a $U$ would require fewer than $n-1$ Householder transformations according to the theorem. Sure, but what would be the harm of using $n-1$ transformations (more than required)? Well, considering the fact that an odd number of Householder transformations cannot form the identity matrix, the difference between $n-m$ and $n-1$ must be an even number for $n-1$ transformations to work. 
 
-Below are experiments that verify this for $n=64$. Empirically, a random orthogonal matrix with $n=64$ is equally likely to have $n-m=63$ or $n-m=64$. Surprising!
+Below are results from experiments in which I tried to "fit" a random orthogonal matrix ($n=64$) using Householder transformations by gradient descent on the mean squared error. I reported the mean absolute error on the vertical axes for better interpretation. Pay attention to the wobbling behavior to the right of the plots. Interestingly, a random orthogonal matrix with $n=64$ is equally likely to have $n-m=63$ or $n-m=64$ (see the notebook for the plot), so this is in no way a contrived experiment. 
 
 Case 1 ($n=64$, $n-m=63$):
 
