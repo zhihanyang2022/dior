@@ -12,7 +12,9 @@ The iterative procedure:
 
 $$Q^{(k+1)} = Q^{(k)} (I + \frac{1}{2} (I - Q^{(k) T} Q^{(k)}))$$
 
-Let $D$ and $M$ denote the number of rows and columns respectively. This method only works for tall matrices ($D>M$) with orthogonal columns. It can also work for $D=M$ but, empirically, convergence is not guaranteed.
+where $Q_0$ is some arbitrary matrix with unit Frobenius norm.
+
+Let $D$ and $M$ denote the number of rows and columns of $Q_0$ respectively. This method only works for tall matrices ($D>M$) with orthogonal columns. It can also work for $D=M$ but, empirically, convergence is not guaranteed.
 
 ### Experiment 1: reconstructing a 3-by-2 matrix with orthogonal columns
 
@@ -34,7 +36,9 @@ Here $D=64$ and $M=20$.
 
 The Householder reflection (also called the Householder transformation):
 
-$$H(\mathbf{z}) = (I - \frac{\mathbf{v} \mathbf{v}^T}{||\mathbf{v}||^2}) \mathbf{z} $$
+$$H_{\mathbf{v}}(\mathbf{z}) = (I - \frac{\mathbf{v} \mathbf{v}^T}{||\mathbf{v}||^2}) \mathbf{z}$$
+
+where $\mathbf{v}$ is the parameter of the transformation.
 
 In the Sylvester flows paper, there was this quote: "It can be shown that any $M \times M$ orthogonal matrix can be written as the product of $M-1$ Householder transformations." Unfortunately, I think it is wrong. 
 
