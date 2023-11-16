@@ -1,6 +1,6 @@
 # DIOR
 
-This is a PyTorch implementation of two ways of achieving differentiable reparameterization of orthogonal matrices.
+This is a PyTorch implementation of two ways of achieving differentiable reparameterization of matrices with orthogonal columns.
 
 I developed this small side project while trying to implement Orthogonal and Householder Sylvester ﬂows.
 
@@ -12,7 +12,7 @@ The iterative procedure:
 
 $$Q^{(k+1)} = Q^{(k)} (I + \frac{1}{2} (I - Q^{(k) T} Q^{(k)}))$$
 
-Let $D$ and $M$ denote the number of rows and columns respectively. This method only works for tall matrices ($D>M$) with orthogonal columns. It can also work when $D=M$ but, empirically speaking, convergence is not guaranteed.
+Let $D$ and $M$ denote the number of rows and columns respectively. This method only works for tall matrices ($D>M$) with orthogonal columns. It can also work for $D=M$ but, empirically, convergence is not guaranteed.
 
 ### Experiment 1: reconstructing a 3-by-2 matrix with orthogonal columns
 
@@ -28,7 +28,7 @@ Legend:
 
 Here $D=64$ and $M=20$.
 
-<img src="orthogonal/64d_learning_process.png">
+<img src="orthogonal/64d_learning_process.png" width=50%>
 
 ## Method 2: composing Householder reflections
 
