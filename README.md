@@ -36,7 +36,7 @@ Here $D=64$ and $M=20$.
 
 The Householder reflection (also called the Householder transformation):
 
-$$H_{\mathbf{v}}(\mathbf{z}) = (I - \frac{\mathbf{v} \mathbf{v}^T}{||\mathbf{v}||^2}) \mathbf{z}$$
+$$H_{\mathbf{v}}(\mathbf{z}) = (I - 2 \frac{\mathbf{v} \mathbf{v}^T}{||\mathbf{v}||^2}) \mathbf{z}$$
 
 where $\mathbf{v}$ is the parameter of the transformation.
 
