@@ -30,7 +30,7 @@ Legend:
 
 Here $D=64$ and $M=20$.
 
-<img src="orthogonal/64d_learning_process.png" width=50% align="center">
+<center><img src="orthogonal/64d_learning_process.png" width=50%></center>
 
 ## Method 2: composing Householder reflections
 
